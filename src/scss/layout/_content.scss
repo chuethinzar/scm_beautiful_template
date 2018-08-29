@@ -44,10 +44,11 @@
             padding: 10px;
             float: left;
             @include respond-to() {
+							width: 100%;
+							height: 500px;
               left: 0;
               right: 0;
               margin: 0 auto;
-              width: 100%;
             }
             .entry-thumbnail{
               display: block;
@@ -149,8 +150,8 @@
   }
 }
   .site-footer {
-    clear: both;
     display: inline-block;
     width: $size__site-full;
+    clear: both;
   }
 }
