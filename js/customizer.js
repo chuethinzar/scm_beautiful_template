@@ -38,24 +38,18 @@ jQuery(function($) {
   wp.customize('themename_header_bgcolor', function(value) {
     value.bind(function(newval) {
       $('.site .site-branding').css({'background-color': newval});
+      $('.flex-control-nav.flex-control-paging').css({'background-color': newval});
       $('.site-content').css({'background-color': newval});
       $('.widget_posts h2').css({'background-color': newval});
-      $('.flex-control-nav.flex-control-paging').css({'background-color': newval});
+      $('.site .site-content .content-area').css({'background-color': newval});
+      $('.site .site-content .content-area .site-main').css({'background-color': newval});
     });
   });
+  // Menu background color
   wp.customize('themename_menu_bgcolor', function(value) {
     value.bind(function(newval) {
       $('.header-menu').css({'background-color': newval});
       $('.header-menu .main-navigation ul .sub-menu a').css({'background-color': newval});
-      $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext').css({'background-color': newval});
-      $('.widget-area .widget').css({'background-color': newval});
-      $('.site .site-footer').css({'background-color': newval});
-      $('.pagetop').css({'background-color': newval});
-      $('.site-main-archive .post .entry-blocktext').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
     });
   });
   // Text color.
@@ -71,21 +65,35 @@ jQuery(function($) {
       $('.widget-area .widget ul li a').css({'color': newval});
       $('.pagetop .fa').css({'color': newval});
       $('.site-footer .site-info h2').css({'color': newval});
-      // $('').css({'color': newval});
-      // $('').css({'color': newval});
-      // $('').css({'color': newval});
+      $('.site-content .pagination .nav-links .page-numbers.current').css({'color': newval});
+      $('.content-area .site-main-single .page .page-header .page-title').css({'color': newval});
+      $('.content-area .site-main-single .page .page-content').css({'color': newval});
+      $('.content-area .site-main-single .slides .entry-title').css({'color': newval});
+      $('.content-area .site-main-single .slides .post-navigation a').css({'color': newval});
+      $('.content-area .site-main-single .post .entry-header .entry-title').css({'color': newval});
+      $('.content-area .site-main-single .post .entry-content').css({'color': newval});
+      $('.content-area .site-main-single .post .widget.widget-related-post .widget-title').css({'color': newval});
+      $('.content-area .site-main-single .post .post-navigation a').css({'color': newval});
+      $('.content-area .site-main-single .post .widget.widget-related-post ul li a').css({'color': newval});
+      $('.content-area .site-main-archive .page-title').css({'color': newval});
+      $('.content-area .site-main-archive .top-page .post .entry-blocktext a').css({'color': newval});
+      $('.content-area .site-main-archive .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
     });
   });
   // Menu background hover color.
   wp.customize('themename_menu_hover_bgcolor', function(value) {
     value.bind(function(newval) {
       $('<style>.header-menu .main-navigation ul .sub-menu a:hover, .header-menu .main-navigation li:hover{background-color:' + newval + ' !important}</style>').appendTo('head');
+      $('<style>.header-menu .main-navigation li:hover{background-color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.site-branding .site-title a:hover{color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.widget_posts ul li p:hover{color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.site .site-content .content-area .site-main .top-page .post .entry-blocktext a:hover{color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.widget-area .widget ul li a:hover{color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.pagetop .fa:hover{color:' + newval + ' !important}</style>').appendTo('head');
       $('<style>.site-main-archive .post .entry-blocktext a:hover{color:' + newval + ' !important}</style>').appendTo('head');
+      $('<style>.site-main-single .post .post-navigation a:hover{color:' + newval + ' !important}</style>').appendTo('head');
+      $('<style>.site-main-single .post .widget.widget-related-post ul li a:hover{color:' + newval + ' !important}</style>').appendTo('head');
+      $('<style>.site-main-single .slides .post-navigation a:hover{color:' + newval + ' !important}</style>').appendTo('head');
     });
   });
 
@@ -95,89 +103,8 @@ jQuery(function($) {
       $('.widget-area .widget').css({'background-color': newval});
       $('.site .site-footer').css({'background-color': newval});
       $('.pagetop').css({'background-color': newval});
-      $('.site-main-archive .post .entry-blocktext').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
-      // $('').css({'background-color': newval});
+      $('.content-area .site-main-archive .top-page .post .entry-blocktext').css({'background-color': newval});
+      $('.site-content .pagination .nav-links .page-numbers.current').css({'background-color': newval});
     });
   });
-  // // Footer background color.
-  // wp.customize('themename_footer_bgcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('footer.site-footer').css({
-  //       'background-color': newval
-  //     });
-  //   });
-  // });
-  // // Footer copyright text color.
-  // wp.customize('themename_copyright_txtcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('.footer-widget>.textwidget').css({
-  //       'color': newval
-  //     });
-  //   });
-  // });
-  // // Link text hover color.
-  // wp.customize('themename_link_hover_txtcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('a:hover').css({
-  //       'color': newval
-  //     });
-  //   });
-  // });
-  // // Link text hover color.
-  // wp.customize('themename_link_hover_txtcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('a:hover').css({
-  //       'color': newval
-  //     });
-  //   });
-  // });
-  // // Menu background color.
-  // wp.customize('themename_menu_bgcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('.header-menu ul li').css({
-  //       'background-color': newval
-  //     });
-  //   });
-  // });
-  // // Menu text color.
-  // wp.customize('themename_menu_txtcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('.header-menu ul li a').css({
-  //       'color': newval
-  //     });
-  //   });
-  // });
-  // // Menu text hover color.
-  // wp.customize('themename_menu_hover_txtcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('.header-menu ul li a:hover').css({
-  //       'color': newval
-  //     });
-  //   });
-  // });
-  // // Menu active background color.
-  // wp.customize('themename_menu_current_bgcolor', function(value) {
-  //   value.bind(function(newval) {
-  //     $('.header-menu ul li.current_page_item').css({
-  //       'background-color': newval
-  //     });
-  //   });
-  // });
-  // // Widget Title Font-awesome
-  // wp.customize('themename_widget_title_fontawesome', function(value) {
-  //   value.bind(function(newval) {
-  //     var val = "\\" + newval;
-  //     $('<style>.widget .widget-title::before{content:"' + val + '" !important}</style>').appendTo('head');
-  //   });
-  // });
-  // // Widget List Font-awesome
-  // wp.customize('themename_widget_list_fontawesome', function(value) {
-  //   value.bind(function(newval) {
-  //     var val = "\\" + newval;
-  //     $('<style>.widget ul li::before{content:"' + val + '" !important}</style>').appendTo('head');
-  //   });
-  // });
 });

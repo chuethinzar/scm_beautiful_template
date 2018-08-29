@@ -31,16 +31,9 @@
         padding: 10px;
       }
     }
-    // .posts-navigation{
-    //     .nav-next{
-    //       width: 50%;
-    //       color: #000;
-    //       text-align: right;
-    //       float: right;
-    //     }
-    //   }
       .entry-thumbnail{
         img{
+          display: block;
           position: relative;
           margin: 0 auto;
           @include respond-to() {

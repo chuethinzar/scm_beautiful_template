@@ -28,7 +28,7 @@
   		li {
         display: inline-block;
     		width: calc(100% / 3 - 18px);
-        height: 320px;
+        height: 280px;
     		margin: 9px;
     		padding: 10px;
     		float: left;
@@ -77,10 +77,11 @@
         display: table;
         margin: 0 auto;
         padding: 5px;
-        border: 2px solid gray;
-        border-radius: 10px;
-        text-align: center;
+        border: 2px solid #cf9b9b;
 				color: #000;
+        background-color: #cf9b9b;
+        text-align: center;
+        font-size: 15px;
         @include respond-to() {
 					width: $size__site-full;
 				}

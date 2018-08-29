@@ -21,7 +21,7 @@ if (!function_exists('scm_beautiful_style')) :
     $txt_color            = get_theme_mod('themename_txtcolor');
     $menu_hover_bgcolor   = get_theme_mod('themename_menu_hover_bgcolor');
     $theme_bgcolor1       = get_theme_mod('themename_theme_bgcolor1');
-    
+
     $widget_title_fontawesome = get_theme_mod('themename_widget_title_fontawesome');
     $widget_list_fontawesome  = get_theme_mod('themename_widget_list_fontawesome');
     // If we get this far, we have custom styles. Let's do this.
@@ -46,9 +46,11 @@ if (!function_exists('scm_beautiful_style')) :
         }
       <?php endif;?>
       .site .site-branding,
+      .flex-control-nav.flex-control-paging,
       .site-content,
       .widget_posts h2,
-      .flex-control-nav.flex-control-paging {
+      .site .site-content .content-area,
+      .site .site-content .content-area .site-main{
         background-color: <?php echo esc_attr($header_bg_color); ?>;
       }
       .header-menu,
@@ -64,7 +66,20 @@ if (!function_exists('scm_beautiful_style')) :
       .widget-area .widget .widget-title,
       .widget-area .widget ul li a,
       .pagetop .fa,
-      .site-footer .site-info h2{
+      .site-footer .site-info h2,
+      .site-content .pagination .nav-links .page-numbers.current,
+      .content-area .site-main-single .page .page-header .page-title,
+      .content-area .site-main-single .page .page-content,
+      .content-area .site-main-single .slides .entry-header .entry-title,
+      .content-area .site-main-single .slides .post-navigation a,
+      .content-area .site-main-single .post .entry-header .entry-title,
+      .content-area .site-main-single .post .entry-content,
+      .content-area .site-main-single .post .post-navigation a,
+      .content-area .site-main-single .post .widget.widget-related-post .widget-title,
+      .content-area .site-main-single .post .widget.widget-related-post ul li a,
+      .content-area .site-main-archive .page-title,
+      .content-area .site-main-archive .top-page .post .entry-blocktext a,
+      .content-area .site-main-archive .top-page .post .entry-blocktext .entry-summary{
         color: <?php echo esc_attr($txt_color); ?>;
       }
 
@@ -77,14 +92,18 @@ if (!function_exists('scm_beautiful_style')) :
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext a:hover,
       .widget-area .widget ul li a:hover,
       .pagetop .fa:hover,
-      .site-main-archive .post .entry-blocktext a:hover{
+      .site-main-archive .post .entry-blocktext a:hover,
+      .site-main-single .post .post-navigation a:hover,
+      .site-main-single .post .widget.widget-related-post ul li a:hover,
+      .site-main-single .slides .post-navigation a:hover{
         color: <?php echo esc_attr($menu_hover_bgcolor); ?>;
       }
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext,
       .widget-area .widget,
       .site .site-footer,
       .pagetop,
-      .site-main-archive .post .entry-blocktext{
+      .content-area .site-main-archive .top-page .post .entry-blocktext,
+      .site-content .pagination .nav-links .page-numbers.current{
         background-color: <?php echo esc_attr($theme_bgcolor1); ?>;
       }
 

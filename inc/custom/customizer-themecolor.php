@@ -85,7 +85,7 @@ function header_footer_color_customizer($wp_customize)
   $default_header_bgcolor       = "#ffffff";
   $default_menu_bgcolor         = "#ec766a";
   $default_txtcolor             = "#000000";
-  $default_menu_hover_bgcolor   = "#2f778a";
+  $default_menu_hover_bgcolor   = "#ab6e68";
   $default_bgcolor1             = "#e6e6e6";
 
   // Header background color customizer
