@@ -1,0 +1,25 @@
+.site-branding {
+  background-color: #fff;
+  color: #000;
+  .site-title {
+    margin: 0 auto;
+    font-size: 60px;
+    font-weight: lighter;
+		@include respond-to() {
+				width: $size__site-full;
+		}
+		a{
+			&:hover{
+				color: #4d4d00;
+			}
+    }
+  }
+  .site-description {
+    margin: 0 auto;
+    font-size: 30px;
+		@include respond-to() {
+				width: $size__site-full;
+		}
+  }
+
+}

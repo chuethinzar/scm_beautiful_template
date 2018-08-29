@@ -1,0 +1,12 @@
+.site{
+  padding: 0;
+  overflow: hidden;
+  .site-header{
+      text-align: center;
+      background-color: #fff;
+      text-transform: uppercase;
+      @include respond-to() {
+    			width: $size__site-full;
+    	}
+  }
+}

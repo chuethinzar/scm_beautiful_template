@@ -1,0 +1,24 @@
+.pagetop {
+  position: fixed;
+  right: 3.4%;
+  bottom: 10%;
+  background-color: #e6e6e6;
+  z-index: 9999;
+  a{
+    display: block;
+    padding: 8px 16px 8px;
+    box-shadow: 0 0 6px #000;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    outline: none;
+    i{
+      color: #000;
+    }
+  }
+    .fa{
+      display: inline-block;
+      text-rendering: auto;
+      font-size: inherit;
+    }
+}

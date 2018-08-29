@@ -1,0 +1,155 @@
+.site {
+	width: 1349px;
+	margin: 0 auto;
+	overflow: hidden;
+	@include respond-to() {
+			width: $size__site-full;
+	}
+	.flexslider{
+		.flex-direction-nav{
+			.flex-prev{
+				margin-left: 10px;
+				@include respond-to() {
+				width: 30px;
+				}
+			}
+		}
+	}
+  .site-content {
+    width: 100%;
+    @include respond-to() {
+      display: inline-block;
+    }
+    .content-area {
+      display: inline-block;
+      width: 100%;
+			background-color: #e6e6e6;
+      @include respond-to() {
+        width: $size__site-full;
+      }
+      .site-main {
+        width: 100%;
+				@include respond-to() {
+						width: $size__site-full;
+				}
+        .top-page{
+          @include respond-to() {
+							width: $size__site-full;
+					}
+          .post{
+            display: inline-block;
+            width: calc(100% / 3 - 20px);
+            height: 480px;
+            margin: 10px;
+            padding: 10px;
+            float: left;
+            @include respond-to() {
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              width: 100%;
+            }
+            .entry-thumbnail{
+              display: block;
+              position: relative;
+              width: 300px;
+              height: 250px;
+              margin: 0 auto;
+              padding: 0;
+              @include respond-to() {
+                width: $size__site-full;
+              }
+            }
+            img{
+              display: block;
+              position: relative;
+              width: 300px;
+              height: 250px;
+              margin: 0 auto;
+              padding: 0;
+              @include respond-to() {
+                width: $size__site-full;
+              }
+            }
+            .entry-blocktext{
+              position: relative;
+              width: 250px;
+              top: -60px;
+              left: 0;
+              right: 0;
+              margin: 0 auto;
+              padding: 15px;
+              text-align: center;
+              background-color: #e6e6e6;
+              a{
+                display: inline-block;
+                width: 100%;
+                color: #000;
+                text-align: center;
+                @include respond-to() {
+                    width: $size__site-full;
+                }
+              }
+              .entry-summary{
+                color: #000;
+              }
+              .read-more{
+                display: table;
+                position: relative;
+                margin: 0 auto;
+                padding: 10px;
+                text-align: center;
+                @include respond-to() {
+                  width: $size__site-full;
+                }
+                .submit{
+                  background-color: gray;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  .error-404{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto	;
+    padding: 20px;
+    border: 1px solid #fff;
+    background-color: #e6e6e6;
+    float: left;
+    @include respond-to() {
+        width: $size__site-full;
+    }
+    .page-header{
+      .page-title{
+        text-align: center;
+        @include respond-to() {
+            width: $size__site-full;
+        }
+      }
+      .page-content{
+        padding: 10px;
+        @include respond-to() {
+            width: $size__site-full;
+        }
+      }
+    }
+  }
+  .widget-area {
+    display: inline-block;
+    overflow: hidden;
+    width: $size__site-full;
+    @include respond-to() {
+      width: $size__site-full;
+    }
+  }
+}
+  .site-footer {
+    clear: both;
+    display: inline-block;
+    width: $size__site-full;
+  }
+}
