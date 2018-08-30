@@ -25,14 +25,13 @@ get_header();
          */
         get_template_part('template-parts/content', get_post_format());
       endwhile;
-      // Display pagination
-      the_posts_pagination();
     else :
       get_template_part('template-parts/content', 'none');
     endif;
     ?>
   </main><!-- #main -->
 </section><!-- #primary -->
+<?php the_posts_pagination(); ?>
 <?php
 get_sidebar();
 get_footer();

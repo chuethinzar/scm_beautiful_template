@@ -8,8 +8,8 @@
  */
 function fontawesome_customizer($wp_customize)
 {
-  $default_widget_title_fontawesome = "f047";
-  $default_widget_list_fontawesome  = "f047";
+  $default_widget_title_fontawesome = "f110";
+  $default_widget_list_fontawesome  = "f061";
   // Font-awesome icon of Widget Change Section
   $wp_customize->add_section(new WP_Customize_Section($wp_customize, 'fontawesome_section', array(
     'title'    => 'ウイジェットのFont-Awesome変更用',

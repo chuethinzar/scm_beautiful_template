@@ -37,7 +37,7 @@ function popularPosts()
 {
   $popularpost = new WP_Query(
     array(
-      'posts_per_page'      => 8,
+      'posts_per_page'      => 6,
       'post_status'         => 'publish',
       'post_type'           => 'post',
       'meta_key'            => 'popular_post_views_count',

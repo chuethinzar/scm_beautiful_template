@@ -5,7 +5,7 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
-jQuery(function($) {
+( function( $ ) {
   // Site title and description.
   wp.customize('blogname', function(value) {
     value.bind(function(to) {
@@ -61,6 +61,7 @@ jQuery(function($) {
       $('.widget_posts ul li p').css({'color': newval});
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext a').css({'color': newval});
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
+      $('.site-content .pagination .nav-links .page-numbers').css({'color':newval});
       $('.widget-area .widget .widget-title').css({'color': newval});
       $('.widget-area .widget ul li a').css({'color': newval});
       $('.pagetop .fa').css({'color': newval});
@@ -76,8 +77,16 @@ jQuery(function($) {
       $('.content-area .site-main-single .post .post-navigation a').css({'color': newval});
       $('.content-area .site-main-single .post .widget.widget-related-post ul li a').css({'color': newval});
       $('.content-area .site-main-archive .page-title').css({'color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext a').css({'color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext .entry-summary').css({'color': newval});
+      $('.site .crumbs a').css({'color': newval});
+      $('.site .crumbs .current').css({'color': newval});
+      $('.content-area .site-main-single .post .entry-header .entry-meta').css({'color': newval});
+      $('.content-area .site-main-single .post .entry-header .entry-meta a').css({'color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext a').css({'color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
+      $('.content-area .site-main-archive .no-results.not-found .page-content').css({'color': newval});
+      $('.widget-area .widget ul li::before').css({'color': newval});
     });
   });
   // Menu background hover color.
@@ -96,7 +105,7 @@ jQuery(function($) {
       $('<style>.site-main-single .slides .post-navigation a:hover{color:' + newval + ' !important}</style>').appendTo('head');
     });
   });
-
+  //Background color1
   wp.customize('themename_theme_bgcolor1', function(value) {
     value.bind(function(newval) {
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext').css({'background-color': newval});
@@ -107,4 +116,18 @@ jQuery(function($) {
       $('.site-content .pagination .nav-links .page-numbers.current').css({'background-color': newval});
     });
   });
-});
+  // Widget Title Font-awesome
+  wp.customize('themename_widget_title_fontawesome', function(value) {
+    value.bind(function(newval) {
+      var val = "\\" + newval;
+      $('<style>.widget-area .widget .widget-title::before{content:"' + val + '" !important}</style>').appendTo('head');
+    });
+  });
+  // Widget List Font-awesome
+  wp.customize('themename_widget_list_fontawesome', function(value) {
+    value.bind(function(newval) {
+      var val = "\\" + newval;
+      $('<style>.widget-area .widget ul li::before{content:"' + val + '" !important}</style>').appendTo('head');
+    });
+  });
+})( jQuery );
