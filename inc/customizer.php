@@ -43,16 +43,21 @@ if (!function_exists('scm_beautiful_style')) :
           color: #<?php echo esc_attr($header_text_color); ?>;
         }
       <?php endif;?>
-      .site .site-branding,
-      .flex-control-nav.flex-control-paging,
       .site-content,
-      .widget_posts h2,
+      .site .site-branding,
       .site .site-content .content-area,
-      .site .site-content .content-area .site-main{
+      .site .site-content .content-area .site-main,
+      .flex-control-nav.flex-control-paging,
+      .widget_posts h2{
         background-color: <?php echo esc_attr($header_bg_color); ?>;
       }
       .header-menu,
-      .header-menu .main-navigation ul .sub-menu a{
+      .header-menu .main-navigation ul .sub-menu a,
+      .site .site-content .content-area .site-main .top-page .post .entry-blocktext .read-more .submit,
+      .widget-area .widget .search-form .search-submit,
+      .content-area .site-main-archive .top-page .post .entry-blocktext .read-more .submit,
+      .content-area .site-main-archive .post .entry-blocktext .read-more .submit,
+      .content-area .site-main-archive .no-results .page-content .search-form .search-submit{
         background-color: <?php echo esc_attr($menu_bgcolor); ?>;
       }
       .header-menu .main-navigation a,
@@ -62,10 +67,12 @@ if (!function_exists('scm_beautiful_style')) :
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext a,
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext .entry-summary,
       .site-content .pagination .nav-links .page-numbers,
+      .site-content .pagination .nav-links .page-numbers.current,
+      .widget-area .widget .widget-title,
       .widget-area .widget ul li a,
+      .widget-area .widget ul li::before,
       .pagetop .fa,
       .site-footer .site-info h2,
-      .site-content .pagination .nav-links .page-numbers.current,
       .content-area .site-main-single .page .page-header .page-title,
       .content-area .site-main-single .page .page-content,
       .content-area .site-main-single .slides .entry-header .entry-title,
@@ -75,6 +82,8 @@ if (!function_exists('scm_beautiful_style')) :
       .content-area .site-main-single .post .post-navigation a,
       .content-area .site-main-single .post .widget.widget-related-post .widget-title,
       .content-area .site-main-single .post .widget.widget-related-post ul li a,
+      .content-area .site-main-single .post .entry-header .entry-meta,
+      .content-area .site-main-single .post .entry-header .entry-meta a,
       .content-area .site-main-archive .page-title,
       .content-area .site-main-archive .post .entry-blocktext a,
       .content-area .site-main-archive .post .entry-blocktext .entry-summary,
@@ -83,8 +92,8 @@ if (!function_exists('scm_beautiful_style')) :
       .content-area .site-main-archive .no-results.not-found .page-content,
       .site .crumbs a,
       .site .crumbs .current,
-      .content-area .site-main-single .post .entry-header .entry-meta,
-      .content-area .site-main-single .post .entry-header .entry-meta a{
+      .site .site-content .error-404 .page-header .page-title,
+      .site .site-content .error-404 .page-content p{
         color: <?php echo esc_attr($txt_color); ?>;
       }
 
@@ -104,11 +113,15 @@ if (!function_exists('scm_beautiful_style')) :
         color: <?php echo esc_attr($menu_hover_bgcolor); ?>;
       }
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext,
+      .site .site-content .error-404,
       .widget-area .widget,
       .site .site-footer,
       .pagetop,
       .content-area .site-main-archive .top-page .post .entry-blocktext,
-      .site-content .pagination .nav-links .page-numbers.current{
+      .site-content .pagination .nav-links .page-numbers.current,
+      .content-area .site-main-archive .no-results,
+      .site-main-single .post .widget.widget-related-post,
+      .content-area .site-main-archive .post .entry-blocktext{
         background-color: <?php echo esc_attr($theme_bgcolor1); ?>;
       }
       .widget-area .widget .widget-title::before {

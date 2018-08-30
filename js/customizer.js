@@ -37,12 +37,12 @@
   // Header background color.
   wp.customize('themename_header_bgcolor', function(value) {
     value.bind(function(newval) {
-      $('.site .site-branding').css({'background-color': newval});
-      $('.flex-control-nav.flex-control-paging').css({'background-color': newval});
       $('.site-content').css({'background-color': newval});
-      $('.widget_posts h2').css({'background-color': newval});
+      $('.site .site-branding').css({'background-color': newval});
       $('.site .site-content .content-area').css({'background-color': newval});
       $('.site .site-content .content-area .site-main').css({'background-color': newval});
+      $('.flex-control-nav.flex-control-paging').css({'background-color': newval});
+      $('.widget_posts h2').css({'background-color': newval});
     });
   });
   // Menu background color
@@ -50,6 +50,11 @@
     value.bind(function(newval) {
       $('.header-menu').css({'background-color': newval});
       $('.header-menu .main-navigation ul .sub-menu a').css({'background-color': newval});
+      $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext .read-more .submit').css({'background-color': newval});
+      $('.widget-area .widget .search-form .search-submit').css({'background-color': newval});
+      $('.content-area .site-main-archive .top-page .post .entry-blocktext .read-more .submit').css({'background-color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext .read-more .submit').css({'background-color': newval});
+      $('.content-area .site-main-archive .no-results .page-content .search-form .search-submit').css({'background-color': newval});
     });
   });
   // Text color.
@@ -62,10 +67,12 @@
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext a').css({'color': newval});
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
       $('.site-content .pagination .nav-links .page-numbers').css({'color':newval});
+      $('.site-content .pagination .nav-links .page-numbers.current').css({'color': newval});
       $('.widget-area .widget ul li a').css({'color': newval});
+      $('<style>.widget-area .widget ul li::before{color: ' + newval + ' !important}</style>').appendTo('head');
+      $('.widget-area .widget .widget-title').css({'color': newval});
       $('.pagetop .fa').css({'color': newval});
       $('.site-footer .site-info h2').css({'color': newval});
-      $('.site-content .pagination .nav-links .page-numbers.current').css({'color': newval});
       $('.content-area .site-main-single .page .page-header .page-title').css({'color': newval});
       $('.content-area .site-main-single .page .page-content').css({'color': newval});
       $('.content-area .site-main-single .slides .entry-title').css({'color': newval});
@@ -75,16 +82,18 @@
       $('.content-area .site-main-single .post .widget.widget-related-post .widget-title').css({'color': newval});
       $('.content-area .site-main-single .post .post-navigation a').css({'color': newval});
       $('.content-area .site-main-single .post .widget.widget-related-post ul li a').css({'color': newval});
-      $('.content-area .site-main-archive .page-title').css({'color': newval});
-      $('.content-area .site-main-archive .post .entry-blocktext a').css({'color': newval});
-      $('.content-area .site-main-archive .post .entry-blocktext .entry-summary').css({'color': newval});
-      $('.site .crumbs a').css({'color': newval});
-      $('.site .crumbs .current').css({'color': newval});
       $('.content-area .site-main-single .post .entry-header .entry-meta').css({'color': newval});
       $('.content-area .site-main-single .post .entry-header .entry-meta a').css({'color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext a').css({'color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
       $('.content-area .site-main-archive .no-results.not-found .page-content').css({'color': newval});
+      $('.content-area .site-main-archive .page-title').css({'color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext a').css({'color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext .entry-summary').css({'color': newval});
+      $('.site .crumbs a').css({'color': newval});
+      $('.site .crumbs .current').css({'color': newval});
+      $('.site .site-content .error-404 .page-header .page-title').css({'color': newval});
+      $('.site .site-content .error-404 .page-content p').css({'color': newval});
     });
   });
   // Menu background hover color.
@@ -107,11 +116,15 @@
   wp.customize('themename_theme_bgcolor1', function(value) {
     value.bind(function(newval) {
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext').css({'background-color': newval});
+      $('.site .site-content .error-404').css({'background-color': newval});
       $('.widget-area .widget').css({'background-color': newval});
       $('.site .site-footer').css({'background-color': newval});
       $('.pagetop').css({'background-color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext').css({'background-color': newval});
       $('.site-content .pagination .nav-links .page-numbers.current').css({'background-color': newval});
+      $('.content-area .site-main-archive .no-results').css({'background-color': newval});
+      $('.site-main-single .post .widget.widget-related-post').css({'background-color': newval});
+      $('.content-area .site-main-archive .post .entry-blocktext').css({'background-color': newval});
     });
   });
   // Widget Title Font-awesome

@@ -18,12 +18,12 @@
                 width: $size__site-full;
             }
           }
-          .entry-meta{
-            padding-left: 20px;
-            @include respond-to() {
-                  width: $size__site-full;
-                  padding: 10px;
-              }
+        .entry-meta{
+          padding-left: 20px;
+          @include respond-to() {
+                width: $size__site-full;
+                padding: 10px;
+            }
           }
         }
     .page-content,
@@ -53,7 +53,7 @@
         display: inline-block;
         width: 100%;
         margin: 0 auto;
-        background-color: #e6e79a;
+        background-color: #e6e6e6;
         @include respond-to() {
          width: $size__site-full;
        }
