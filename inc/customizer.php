@@ -62,7 +62,6 @@ if (!function_exists('scm_beautiful_style')) :
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext a,
       .site .site-content .content-area .site-main .top-page .post .entry-blocktext .entry-summary,
       .site-content .pagination .nav-links .page-numbers,
-      .widget-area .widget .widget-title,
       .widget-area .widget ul li a,
       .pagetop .fa,
       .site-footer .site-info h2,
@@ -85,8 +84,7 @@ if (!function_exists('scm_beautiful_style')) :
       .site .crumbs a,
       .site .crumbs .current,
       .content-area .site-main-single .post .entry-header .entry-meta,
-      .content-area .site-main-single .post .entry-header .entry-meta a,
-      .widget-area .widget ul li::before{
+      .content-area .site-main-single .post .entry-header .entry-meta a{
         color: <?php echo esc_attr($txt_color); ?>;
       }
 

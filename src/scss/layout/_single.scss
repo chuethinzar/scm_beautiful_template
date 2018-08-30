@@ -18,6 +18,13 @@
                 width: $size__site-full;
             }
           }
+          .entry-meta{
+            padding-left: 20px;
+            @include respond-to() {
+                  width: $size__site-full;
+                  padding: 10px;
+              }
+          }
         }
     .page-content,
       .entry-content{

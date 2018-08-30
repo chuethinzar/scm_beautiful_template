@@ -62,7 +62,6 @@
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext a').css({'color': newval});
       $('.site .site-content .content-area .site-main .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
       $('.site-content .pagination .nav-links .page-numbers').css({'color':newval});
-      $('.widget-area .widget .widget-title').css({'color': newval});
       $('.widget-area .widget ul li a').css({'color': newval});
       $('.pagetop .fa').css({'color': newval});
       $('.site-footer .site-info h2').css({'color': newval});
@@ -86,7 +85,6 @@
       $('.content-area .site-main-archive .top-page .post .entry-blocktext a').css({'color': newval});
       $('.content-area .site-main-archive .top-page .post .entry-blocktext .entry-summary').css({'color': newval});
       $('.content-area .site-main-archive .no-results.not-found .page-content').css({'color': newval});
-      $('.widget-area .widget ul li::before').css({'color': newval});
     });
   });
   // Menu background hover color.
